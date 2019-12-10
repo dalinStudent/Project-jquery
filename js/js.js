@@ -18,14 +18,16 @@ var getAPI = (api) => {
 }
 
 //function to select recipe
-function selectRecipe(data) {
+var allChoose = [];
+function selectRecipe(recipe) {
+    allChoose = recipe;
     var choose = "";
-    data.forEach(element => {
-        choose +=`
+    recipe.forEach(element => {
+        choose += `
         <option value="${element.id}">${element.name}</option>
         <option value="${element.id}">${element.name}</option>
     `;
-    $('#choose_recipe').append(choose);
+        $('#choose_recipe').append(choose);
     });
 }
 
@@ -58,27 +60,13 @@ function getRecipe(data_recipe) {
                     </div>
                     <div class="col-3"></div>
                 </div>               
-            <div class="row">
-                <div class="col-6">
-                        <h5 class="text-center">Ingredients</h5>
-                   
-                    <table class="table" id="ingredients">
-
-                    </table>
-                </div>
-               
-                <div class="col-6">
-                    <h5 class="text-center">Instroduction</h5>
-                       
-                </div>
-            </div>                  
             `;
             getIngrediant(item_recipe);
         }
 
     });
     $('#display').html(display);
-    
+
 }
 
 // get all infrediant using name function
@@ -95,12 +83,23 @@ function getIngrediant(recipe) {
 var showIngrediantTable = (show) => {
     var ingrediant = "";
     ingrediant += `
-        <tr>
-            <td><img src= "${show.iconUrl}" width="25"></td>
-            <td>${show.quantity}</td>
-            <td>${show.unit[0]}</td>
-            <td>${show.name}</td>
-        </tr>
+    <div class="row">
+        <div class="col-4">
+            <h5 class="text-center">Ingredients</h5>                  
+            <table class="table">
+                <tr>
+                    <td><img src= "${show.iconUrl}" width="25"></td>
+                    <td>${show.quantity}</td>
+                    <td>${show.unit[0]}</td>
+                    <td>${show.name}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4">        
+                <h5 class="text-center">Instroduction</h5>                      
+        </div>
+    </div>                               
         `;
     $('#ingredients').html(ingrediant);
 }
