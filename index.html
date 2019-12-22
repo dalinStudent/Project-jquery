@@ -2,50 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        td {
-            padding: 30px;
-        }
 
-        #int, #inst {
-            display: none;
-        }
     </style>
 </head>
 
 <body>
-    <div class="container mt-5">
+    <nav class="navbar navbar-expand-sm">
+        <a href="index.html" class="navbar-brand">
+            <img src="http://www.novaprestatyn.co.uk/static/images/carousel-food.png" class="img-fluid" alt="">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link text-light">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="home.html" class="nav-link text-light">Cook Food</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid text-center mt-5">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <select name="" id="choose_recipe" class="form-control">
-                    <option value="" disabled selected>Choose recipe</option>
-                </select>
+            <div class="col-md-2"></div>
+            <div class="col-8">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://t3.ftcdn.net/jpg/02/74/72/48/240_F_274724822_NZTQmDyuxPVqPdKPK18QVGALBgZUviX9.jpg"
+                                alt="" class="img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://t3.ftcdn.net/jpg/02/79/27/42/240_F_279274256_oG6ZfEyV6N7WaOhPb8gzgOvZhOHgpYzT.jpg"
+                                alt="" class="img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://t3.ftcdn.net/jpg/02/16/17/94/240_F_216179432_u7DfaqiTedG947AGjW7rCi7Lc7pOlKMV.jpg"
+                                alt="">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+
             </div>
-            <div class="col-4"></div>
+            <div class="col-md-2"></div>
         </div>
     </div>
-    <div class="container">
-        <div class="row mt-5" id="display"></div>
-        <div class="row mt-5" id="member"></div>
-        <div class="row mt-5">
-            <div class="col-6">
-                <h5 id="int" class="mb-3">Introductions</h5>
-                <table class="table table-borderless" id="ingredient"></table>
-            </div>
-            <div class="col-6">
-                <h5  id="inst" class="mb-3">Instructions</h5>
-                <div id="step"></div>
-            </div>
-        </div>
-    </div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/code.js"></script>
 </body>
 
 </html>

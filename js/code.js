@@ -46,7 +46,7 @@ function eachRecipe(name, img) {
     display += `
         <div class="col-3"></div>
         <div class="col-3"><h2>${name}</h2></div>
-        <div class="col-3"><img src="${img}" width="200px"></div>
+        <div class="col-3"><img src="${img}" class="img-thumbnail" width="200px"></div>
         <div class="col-3"></div>
     `;
     $("#display").html(display);
@@ -73,16 +73,16 @@ function eachMember(member) {
     
     <div class="col-3"></div>
     <div class="col-3">Number of person</div>
-    <div class="col-3">
+    <div class="col-xs-2 ml-3">
         <form action="#">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <button class="btn btn-light" id="minus" type="button">-</button>
+                    <button class="btn btn-danger" id="minus" type="button">-</button>
                 </div>
-                <input type="text" id="members" width="10px" value="${member}" min="1" max="15" disabled
+                <input type="text" id="members" size="10" width="10px" value="${member}" min="1" max="15" disabled
                     class="form-control text-center">
                 <div class="input-group-append">
-                    <button class="btn btn-light" id="plus" type="button">+</button>
+                    <button class="btn btn-info" id="plus" type="button">+</button>
                 </div>
             </div>
         </form>

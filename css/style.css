@@ -1,0 +1,21 @@
+body {
+    background-image: url("https://media.istockphoto.com/videos/orange-background-video-id648869278?s=640x640");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Make the image fully responsive */
+.carousel-inner img {
+    width: 100%;
+}
+.col-12{
+    margin-left:150px ;
+}
+.navbar-brand{
+    width: 60px;
+}
+#int,#inst {
+    display: none;
+}
+nav{
+    background: rgb(190, 180, 120);
+}
